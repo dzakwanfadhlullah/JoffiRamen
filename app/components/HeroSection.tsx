@@ -4,7 +4,11 @@ import Image from "next/image";
 import { MessageCircle, BookOpen, ChevronRight, Menu } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onOpenMenu: () => void;
+}
+
+export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
@@ -88,6 +92,7 @@ export default function HeroSection() {
           
           {/* Secondary CTA: Outline Style */}
           <motion.button
+            onClick={onOpenMenu}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="w-full bg-transparent border-2 border-white text-white h-[52px] px-6 rounded-[14px] flex justify-between items-center font-bold text-sm tracking-wide hover:bg-white/10 transition"
