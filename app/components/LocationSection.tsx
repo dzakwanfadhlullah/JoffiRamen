@@ -20,7 +20,7 @@ export default function LocationSection() {
             <MapPin className="w-4 h-4 text-[var(--color-brand-red)]" />
           </div>
           <div>
-            <p className="font-bold text-sm text-gray-900 leading-tight mb-0.5">Jl. Sudirman No. 123</p>
+            <p className="font-bold text-sm text-gray-900 leading-tight mb-0.5">Jl. R. E. Martadinata</p>
             <p className="text-[10px] text-gray-500">Palembang</p>
           </div>
         </div>
