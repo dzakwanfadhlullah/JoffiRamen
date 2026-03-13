@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
+import "leaflet/dist/leaflet.css";
 
 const montserrat = Montserrat({
   variable: "--font-heading",
