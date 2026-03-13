@@ -10,7 +10,7 @@ export default function QuickAccessGrid() {
       title: "GOOGLE MAPS",
       subtitle: "Buka Peta",
       iconSrc: "/icons/maps.svg",
-      href: "#",
+      href: "https://maps.app.goo.gl/zJJVAabod4ahAJmP6",
     },
     {
       title: "BUKU MENU",
@@ -22,13 +22,13 @@ export default function QuickAccessGrid() {
       title: "WHATSAPP",
       subtitle: "Hubungi Kami",
       iconSrc: "/icons/whatsapp.svg",
-      href: "#",
+      href: "https://wa.me/6282379809008",
     },
     {
       title: "INSTAGRAM",
       subtitle: "Ikuti Kami",
       iconSrc: "/icons/instagram.svg",
-      href: "#",
+      href: "https://instagram.com/joffiramen_lemabang.palembang",
     },
   ];
 
@@ -46,6 +46,8 @@ export default function QuickAccessGrid() {
           <motion.a
             key={link.title}
             href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ y: -4, scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}

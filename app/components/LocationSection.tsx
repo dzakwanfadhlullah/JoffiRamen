@@ -41,7 +41,10 @@ export default function LocationSection() {
       </motion.div>
 
       {/* Map Button */}
-      <motion.button 
+      <motion.a 
+        href="https://maps.app.goo.gl/zJJVAabod4ahAJmP6"
+        target="_blank"
+        rel="noopener noreferrer"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className="w-full bg-[var(--color-brand-black)] text-white h-[52px] px-6 rounded-[14px] flex justify-center items-center gap-2 font-bold text-sm tracking-widest shadow-md hover:bg-gray-800 transition"
@@ -49,7 +52,7 @@ export default function LocationSection() {
         <MapPin className="w-4 h-4 text-[var(--color-brand-red)]" />
         <span>BUKA DI GOOGLE MAPS</span>
         <ChevronRight className="w-4 h-4 ml-auto" />
-      </motion.button>
+      </motion.a>
     </section>
   );
 }

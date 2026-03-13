@@ -69,7 +69,10 @@ export default function HeroSection() {
           className="space-y-4"
         >
           {/* Primary CTA: Solid Red with Subtle Pulse */}
-          <motion.button
+          <motion.a
+            href="https://wa.me/6282379809008"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             animate={{ boxShadow: ["0px 8px 20px rgba(179,27,27,0.3)", "0px 8px 35px rgba(179,27,27,0.6)", "0px 8px 20px rgba(179,27,27,0.3)"] }}
@@ -81,7 +84,7 @@ export default function HeroSection() {
               <span>RESERVASI MEJA</span>
             </div>
             <ChevronRight className="w-5 h-5" />
-          </motion.button>
+          </motion.a>
           
           {/* Secondary CTA: Outline Style */}
           <motion.button
