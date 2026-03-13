@@ -42,11 +42,24 @@ export default function QuickAccessGrid({ onOpenMenu }: QuickAccessGridProps) {
 
   return (
     <section>
-      <div className="text-center mb-6">
-        <h2 className="font-heading text-xl font-bold tracking-widest text-gray-900">
-          QUICK <span className="text-[var(--color-brand-red)]">ACCESS</span>
-        </h2>
-        <div className="w-10 h-0.5 bg-[var(--color-brand-red)] mx-auto mt-2"></div>
+      <div className="text-center mb-6 overflow-hidden">
+        <motion.div
+          initial={{ y: "100%" }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <h2 className="font-heading text-xl font-bold tracking-widest text-gray-900">
+            QUICK <span className="text-[var(--color-brand-red)]">ACCESS</span>
+          </h2>
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="w-10 h-0.5 bg-[var(--color-brand-red)] mx-auto mt-2 origin-center"
+          ></motion.div>
+        </motion.div>
       </div>
       
       <div className="grid grid-cols-2 gap-4">
@@ -64,10 +77,21 @@ export default function QuickAccessGrid({ onOpenMenu }: QuickAccessGridProps) {
               whileHover={{ y: -4, scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{ 
+                opacity: 1, 
+                y: 0,
+                boxShadow: [
+                  "0px 2px 8px rgba(0,0,0,0.05)", 
+                  "0px 2px 15px rgba(179,27,27,0.1)", 
+                  "0px 2px 8px rgba(0,0,0,0.05)"
+                ]
+              }}
               viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 300, damping: 20, delay: index * 0.1 }}
-              className="bg-white p-4 rounded-[16px] shadow-sm flex items-center justify-between hover:shadow-md transition w-full text-left"
+              transition={{ 
+                y: { type: "spring", stiffness: 300, damping: 20, delay: index * 0.1 },
+                boxShadow: { repeat: Infinity, duration: 4, ease: "easeInOut", delay: index * 0.5 }
+              }}
+              className="bg-white p-4 rounded-[16px] shadow-sm flex items-center justify-between transition w-full text-left border border-gray-50"
             >
               <div className="flex items-start gap-4">
                 <div className="relative w-8 h-8 shrink-0 drop-shadow-sm">

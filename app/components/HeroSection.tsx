@@ -47,22 +47,71 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
           </button>
         </nav>
 
+        {/* Floating Vapor Effect (Zen in Motion) */}
+        <div className="absolute top-20 left-0 w-full h-64 pointer-events-none overflow-hidden z-0 opacity-20">
+          {[1, 2, 3].map((i) => (
+            <motion.svg
+              key={i}
+              className="absolute text-white/40 fill-current"
+              width="200"
+              height="400"
+              viewBox="0 0 200 400"
+              initial={{ y: 200, x: i * 80, opacity: 0, scale: 0.5 }}
+              animate={{ 
+                y: -100, 
+                x: i * 80 + (Math.sin(i) * 30), 
+                opacity: [0, 1, 0],
+                scale: [0.5, 1.2, 1.5]
+              }}
+              transition={{ 
+                duration: 8 + i * 2, 
+                repeat: Infinity, 
+                ease: "linear",
+                delay: i * 3
+              }}
+            >
+              <path d="M100,300 Q130,250 100,200 T100,100" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="5,5" />
+            </motion.svg>
+          ))}
+        </div>
+
         {/* Main Text with Framer Motion fade-in */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8 text-white"
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-8 text-white relative z-10"
         >
-          <p className="font-heading text-xs tracking-[0.2em] font-semibold mb-1">
-            OTENTIK
-          </p>
-          <p className="font-heading text-xl font-bold tracking-wider mb-0">
-            JEPANG
-          </p>
-          <h1 className="font-heading text-6xl font-extrabold tracking-tight mt-0">
-            RAMEN
-          </h1>
+          <div className="overflow-hidden">
+            <motion.p 
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-heading text-xs tracking-[0.2em] font-semibold mb-1"
+            >
+              AUTHENTIC
+            </motion.p>
+          </div>
+          <div className="overflow-hidden">
+            <motion.p 
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="font-heading text-xl font-bold tracking-wider mb-0"
+            >
+              JAPAN
+            </motion.p>
+          </div>
+          <div className="overflow-hidden">
+            <motion.h1 
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="font-heading text-6xl font-extrabold tracking-tight mt-0"
+            >
+              RAMEN
+            </motion.h1>
+          </div>
         </motion.div>
 
         {/* Call to Action Buttons */}
