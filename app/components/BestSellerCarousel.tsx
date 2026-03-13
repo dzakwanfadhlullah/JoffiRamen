@@ -7,23 +7,23 @@ export default function BestSellerCarousel() {
   const items = [
     {
       id: 1,
-      name: "Tonkotsu Ramen",
-      price: "Rp 38K",
-      image: "/images/ramen-tonkotsu.webp",
-      badge: null,
-    },
-    {
-      id: 2,
-      name: "Spicy Miso Ramen",
-      price: "Rp 40K",
-      image: "/images/ramen-spicy.webp",
+      name: "Ramen Mala Original",
+      price: "Rp 17K",
+      image: "/images/menu_terlaris/mala.png",
       badge: "PEDAS",
     },
     {
+      id: 2,
+      name: "Dry Ramen Extra Beef",
+      price: "Rp 30K",
+      image: "/images/menu_terlaris/dry.png",
+      badge: null,
+    },
+    {
       id: 3,
-      name: "Chicken Karaage",
-      price: "Rp 25K",
-      image: "/images/karaage.webp",
+      name: "Curry Rice Omega Egg",
+      price: "Rp 21K",
+      image: "/images/menu_terlaris/curry.png",
       badge: null,
     },
   ];
