@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { MessageCircle, BookOpen, ChevronRight, Menu } from "lucide-react";
+import { ChevronRight, Menu } from "lucide-react";
+import { ChatCircle, BookBookmark } from "@phosphor-icons/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface HeroSectionProps {
@@ -139,7 +140,7 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
             className="group relative overflow-hidden w-full text-white h-[52px] px-6 rounded-[16px] flex justify-between items-center font-bold text-sm tracking-wide transition shadow-[0_8px_20px_rgba(179,27,27,0.5)] border-t border-red-400/50 bg-gradient-to-b from-[#E52A2A] to-[#A01616]"
           >
             <div className="flex items-center gap-3 relative z-10">
-              <MessageCircle className="w-5 h-5 drop-shadow-md" />
+              <ChatCircle weight="fill" className="w-5 h-5 drop-shadow-md" />
               <span className="drop-shadow-md tracking-wider">RESERVASI MEJA</span>
             </div>
             <ChevronRight className="w-5 h-5 relative z-10 drop-shadow-md text-white/90 group-hover:translate-x-1 transition-transform" />
@@ -161,7 +162,7 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
             className="group w-full text-white h-[52px] px-6 rounded-[16px] flex justify-between items-center font-bold text-sm tracking-wide transition shadow-[0_8px_32px_rgba(0,0,0,0.1)] border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20"
           >
             <div className="flex items-center gap-3 drop-shadow-md">
-              <BookOpen className="w-5 h-5" />
+              <BookBookmark weight="regular" className="w-5 h-5" />
               <span>LIHAT MENU</span>
             </div>
             <ChevronRight className="w-5 h-5 drop-shadow-md text-white/70 group-hover:translate-x-1 transition-transform" />
