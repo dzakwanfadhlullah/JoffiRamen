@@ -30,19 +30,27 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
 
       <div className="relative z-10">
         {/* Navbar */}
-        <nav className="flex justify-between items-center mb-24">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[var(--color-brand-red)] rounded-full flex items-center justify-center text-white font-bold text-2xl border-2 border-[var(--color-brand-red)] shadow-sm">
-              <span>R</span>
+        <nav className="flex justify-between items-start mb-16">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex items-center"
+          >
+            {/* Circular Logo Container */}
+            <div className="bg-white p-2.5 rounded-full shadow-2xl border border-white/20 flex items-center justify-center w-20 h-20 -ml-2 -mt-2">
+              <div className="relative h-35 w-35">
+                <Image
+                  src="/images/menu/logo-joffi.png"
+                  alt="Joffi Ramen Logo"
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </div>
             </div>
-            <div className="text-white flex flex-col leading-none justify-center">
-              <span className="font-heading font-bold text-3xl tracking-widest leading-none">
-                JOFFI
-              </span>
-              <span className="text-sm tracking-[0.3em] ml-1 mt-1 leading-none text-white/90">RAMEN</span>
-            </div>
-          </div>
-          <button className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-white/20 transition">
+          </motion.div>
+          <button className="w-10 h-10 bg-black/20 backdrop-blur-md rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/20 transition relative z-10 shadow-sm mt-2">
             <Menu className="w-5 h-5" />
           </button>
         </nav>
@@ -57,15 +65,15 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
               height="400"
               viewBox="0 0 200 400"
               initial={{ y: 200, x: i * 80, opacity: 0, scale: 0.5 }}
-              animate={{ 
-                y: -100, 
-                x: i * 80 + (Math.sin(i) * 30), 
+              animate={{
+                y: -100,
+                x: i * 80 + (Math.sin(i) * 30),
                 opacity: [0, 1, 0],
                 scale: [0.5, 1.2, 1.5]
               }}
-              transition={{ 
-                duration: 8 + i * 2, 
-                repeat: Infinity, 
+              transition={{
+                duration: 8 + i * 2,
+                repeat: Infinity,
                 ease: "linear",
                 delay: i * 3
               }}
@@ -83,7 +91,7 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
           className="mb-8 text-white relative z-10"
         >
           <div className="overflow-hidden">
-            <motion.p 
+            <motion.p
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -93,7 +101,7 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
             </motion.p>
           </div>
           <div className="overflow-hidden">
-            <motion.p 
+            <motion.p
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -103,7 +111,7 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
             </motion.p>
           </div>
           <div className="overflow-hidden">
-            <motion.h1 
+            <motion.h1
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -135,7 +143,7 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
               <span className="drop-shadow-md tracking-wider">RESERVASI MEJA</span>
             </div>
             <ChevronRight className="w-5 h-5 relative z-10 drop-shadow-md text-white/90 group-hover:translate-x-1 transition-transform" />
-            
+
             {/* Shimmer shining effect */}
             <motion.div
               animate={{ x: ["-100%", "200%"] }}
@@ -143,7 +151,7 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
               className="absolute inset-0 z-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-20deg]"
             />
           </motion.a>
-          
+
           {/* Secondary CTA: Pure Frosted Glass */}
           <motion.button
             onClick={onOpenMenu}
