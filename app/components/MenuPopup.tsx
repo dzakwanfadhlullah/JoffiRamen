@@ -35,9 +35,9 @@ export default function MenuPopup({ isOpen, onClose }: MenuPopupProps) {
   }, [isOpen, onClose]);
 
   const menuImages = [
-    { src: "/images/menu/sides.jpeg", alt: "Sides Menu" },
-    { src: "/images/menu/dry_ramen.jpeg", alt: "Dry Ramen Menu" },
     { src: "/images/menu/ramen.jpeg", alt: "Ramen Variants Menu" },
+    { src: "/images/menu/dry_ramen.jpeg", alt: "Dry Ramen Menu" },
+    { src: "/images/menu/sides.jpeg", alt: "Sides Menu" },
     { src: "/images/menu/drinks.jpeg", alt: "Drinks Menu" },
   ];
 
