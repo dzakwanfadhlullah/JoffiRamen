@@ -86,7 +86,7 @@ export default function TnCPopup({ isOpen, onClose }: TnCPopupProps) {
             {/* Scrollable Content */}
             <div className="flex-1 overflow-y-auto px-6 py-6 hide-scrollbar">
               <p className="text-[11px] text-gray-400 font-semibold tracking-widest uppercase mb-5">
-                TikTok Shop · Joffi Ramen
+                Joffi Ramen X TikTok Shop
               </p>
               <ol className="space-y-4 text-[14px] leading-relaxed text-gray-700">
                 <li className="flex gap-3">
