@@ -97,9 +97,9 @@ export default function TikTokSection() {
                 <Image
                   src={item.src}
                   alt={`TikTok Post ${item.originalIndex + 1}`}
-                  fill
-                  className="object-cover pointer-events-none"
-                  sizes="220px"
+                  width={220}
+                  height={360}
+                  className="object-cover pointer-events-none w-full h-full"
                 />
 
                 {/* Tap hint on top card only */}
@@ -128,6 +128,26 @@ export default function TikTokSection() {
             }`}
           />
         ))}
+      </div>
+
+      {/* Promotional Text Block */}
+      <div className="mt-[16px] text-center text-[14px] leading-[1.5] text-gray-600 px-4">
+        <p>Harga lebih hemat tersedia di TikTok Shop.</p>
+        <p className="mb-2">Pesan sekarang sebelum promonya berakhir.</p>
+        <div className="font-bold tracking-tight">
+          <a 
+            href="https://vt.tiktok.com/ZS9dcqf7HKQck-LL7ud/?poisharing=JOFFI-RAMEN---LEMABANG" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            TIKTOK SHOP
+          </a>
+          <span className="mx-2 text-gray-300">|</span>
+          <a href="#" className="text-blue-600 underline">
+            SYARAT & KETENTUAN
+          </a>
+        </div>
       </div>
     </section>
   );
