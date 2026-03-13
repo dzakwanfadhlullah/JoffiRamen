@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joffi Ramen Mobile App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style data-purpose="custom-fonts-and-theme">body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #F8F5F0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e6e0d4' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: #1A1A1A
+    }
+h1, h2, h3, .font-heading {
+    font-family: "Montserrat", sans-serif
+    }
+.text-brand-red {
+    color: #B31B1B
+    }
+.bg-brand-red {
+    background-color: #B31B1B
+    }
+.bg-brand-black {
+    background-color: #1A1A1A
+    }
+/* Hero Image Override */
+.hero-bg {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(248, 245, 240, 1) 100%), url(https://lh3.googleusercontent.com/aida-public/AB6AXuDhhta3ASIOAUv-Qf7LoO-7Cymq610wSlLZddZZ0dJBFQ-cpnQ865J1_lPJm1dpCOmw3z3HM8YGjP3FgBCdyynb8C472Bo7tWHLewzktwys-Rg39K7WiZIyqgU5GPUJJmiFM5lw7-c4Wwpm4xL-lEAfLL6Ood_Iab8lHTTZYymHU4j1QWScDQhim_HA9SURcbd48pcFPJVKKAiatoG8V9EPJBHJWSCpGwXZEkMJaYaTrE4VN6TMGu-7fga6icJ36t9QYxdE_E15rQ);
+    background-size: cover;
+    background-position: center top
+    }
+/* Gradient overlay for cards */
+.card-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased max-w-md mx-auto min-h-screen relative shadow-2xl overflow-x-hidden">
+<!-- BEGIN: Hero Section -->
+<header class="relative hero-bg pt-8 pb-10 px-6 rounded-b-[40px] shadow-lg">
+<!-- Navbar -->
+<nav class="flex justify-between items-center mb-24">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center text-white font-bold text-xl border-2 border-brand-red">
+<!-- Placeholder for Logo Icon -->
+<span>R</span>
+</div>
+<div class="text-white flex flex-col leading-tight">
+<span class="font-heading font-bold text-xl tracking-widest">JOFFI</span>
+<span class="text-[10px] tracking-[0.3em] ml-1">RAMEN</span>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-white/20 transition">
+<i class="w-5 h-5" data-lucide="menu"></i>
+</button>
+</nav>
+<!-- Main Text -->
+<div class="mb-8 text-white">
+<p class="font-heading text-xs tracking-[0.2em] font-semibold mb-1">AUTHENTIC</p>
+<p class="font-heading text-xl font-bold tracking-wider mb-0">JAPANESE</p>
+<h1 class="font-heading text-6xl font-extrabold tracking-tight mt-0">RAMEN</h1>
+</div>
+<!-- Call to Action Buttons -->
+<div class="space-y-4 relative z-10">
+<button class="w-full bg-brand-red text-white py-4 px-6 rounded-full flex justify-between items-center font-bold text-sm tracking-wide shadow-md hover:bg-red-800 transition">
+<div class="flex items-center gap-3">
+<i class="w-5 h-5" data-lucide="message-circle"></i>
+<span>RESERVE NOW</span>
+</div>
+<i class="w-5 h-5" data-lucide="chevron-right"></i>
+</button>
+<button class="w-full bg-white text-gray-900 py-4 px-6 rounded-full flex justify-between items-center font-bold text-sm tracking-wide shadow-md hover:bg-gray-50 transition">
+<div class="flex items-center gap-3">
+<i class="w-5 h-5" data-lucide="book-open"></i>
+<span>VIEW MENU</span>
+</div>
+<i class="w-5 h-5" data-lucide="chevron-right"></i>
+</button>
+</div>
+</header>
+<!-- END: Hero Section -->
+<main class="px-6 py-10 space-y-12">
+<!-- BEGIN: Quick Access Section -->
+<section>
+<div class="text-center mb-6">
+<h2 class="font-heading text-xl font-bold tracking-widest text-gray-900">
+          QUICK <span class="text-brand-red">ACCESS</span>
+</h2>
+<div class="w-10 h-0.5 bg-brand-red mx-auto mt-2"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Google Maps Card -->
+<a class="bg-white/80 backdrop-blur-sm p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition" href="#">
+<div class="flex items-start gap-3">
+<div class="text-brand-red mt-0.5">
+<i class="w-6 h-6" data-lucide="map-pin"></i>
+</div>
+<div>
+<h3 class="font-heading font-bold text-xs tracking-wider text-gray-900 mb-0.5">GOOGLE MAPS</h3>
+<p class="text-[10px] text-gray-500">Open Location</p>
+</div>
+</div>
+<i class="w-4 h-4 text-gray-400" data-lucide="chevron-right"></i>
+</a>
+<!-- Menu Card -->
+<a class="bg-white/80 backdrop-blur-sm p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition" href="#">
+<div class="flex items-start gap-3">
+<div class="text-brand-red mt-0.5">
+<i class="w-6 h-6" data-lucide="file-text"></i>
+</div>
+<div>
+<h3 class="font-heading font-bold text-xs tracking-wider text-gray-900 mb-0.5">MENU</h3>
+<p class="text-[10px] text-gray-500">View Full Menu</p>
+</div>
+</div>
+<i class="w-4 h-4 text-gray-400" data-lucide="chevron-right"></i>
+</a>
+<!-- WhatsApp Card -->
+<a class="bg-white/80 backdrop-blur-sm p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition" href="#">
+<div class="flex items-start gap-3">
+<div class="text-green-500 mt-0.5">
+<i class="w-6 h-6" data-lucide="phone"></i>
+</div>
+<div>
+<h3 class="font-heading font-bold text-xs tracking-wider text-gray-900 mb-0.5">WHATSAPP</h3>
+<p class="text-[10px] text-gray-500">Reservation</p>
+</div>
+</div>
+<i class="w-4 h-4 text-gray-400" data-lucide="chevron-right"></i>
+</a>
+<!-- Instagram Card -->
+<a class="bg-white/80 backdrop-blur-sm p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition" href="#">
+<div class="flex items-start gap-3">
+<div class="text-pink-500 mt-0.5">
+<i class="w-6 h-6" data-lucide="instagram"></i>
+</div>
+<div>
+<h3 class="font-heading font-bold text-xs tracking-wider text-gray-900 mb-0.5">INSTAGRAM</h3>
+<p class="text-[10px] text-gray-500">Follow Us</p>
+</div>
+</div>
+<i class="w-4 h-4 text-gray-400" data-lucide="chevron-right"></i>
+</a>
+</div>
+</section>
+<!-- END: Quick Access Section -->
+<!-- BEGIN: Best Sellers Section -->
+<section>
+<div class="text-center mb-6">
+<h2 class="font-heading text-xl font-bold tracking-widest text-gray-900">
+          BEST <span class="text-brand-red">SELLERS</span>
+</h2>
+<div class="w-10 h-0.5 bg-brand-red mx-auto mt-2"></div>
+</div>
+<!-- Horizontal Scrollable Container -->
+<div class="flex overflow-x-auto pb-4 -mx-6 px-6 gap-4 snap-x">
+<!-- Product Card 1 -->
+<div class="relative min-w-[140px] h-40 rounded-3xl overflow-hidden shadow-md snap-center shrink-0">
+<img alt="Tonkotsu Ramen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA-2qdjXFjQUkstZ0Ccn9N0UeKkib44WXbp3s6g09hy2Pn9TaGLqOKybibswzzcRq0Inua5doDj7HaauRoE2ljoC--e1tNbxwIvhsaYh7gQTFEVEXrALzcDrGN9yVCOvuBLscGErrQMRAbq-AKQBdeH_bXx1xyh1yqnnXPEzgnQYIcJLwKudxqt1f7Frc6an8EEZvVER3rwIWxzxagKq5D765fOPcBdtzRIk71smI73bB_SyYrp2Q3yKZmzjBIwaugD_fObN-sXQ"/>
+<div class="absolute inset-0 card-gradient flex flex-col justify-end p-3 text-white">
+<h4 class="font-bold text-sm leading-tight mb-1">Tonkotsu Ramen</h4>
+<p class="text-xs text-gray-200">Rp 38K</p>
+</div>
+</div>
+<!-- Product Card 2 (Spicy) -->
+<div class="relative min-w-[140px] h-40 rounded-3xl overflow-hidden shadow-md snap-center shrink-0">
+<div class="absolute top-2 left-2 bg-brand-red text-white text-[8px] font-bold px-2 py-1 rounded-md z-10 tracking-wider">
+            SPICY
+          </div>
+<img alt="Spicy Miso Ramen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1k5a3EidMXo235OeneuxLeB0i6Yk5mi-KsVZ5q55yuD6Qo5jxUpXrhMaieW2zOhqAu59v8peJ1tVGp11OHveuMpd75iPLM2DKZLZovU6UQ02AnWnplqph_CccJUIuP9sSpY6w0rQT-TyEaPt91D3FOWHN69_q2Hnurj0aAf4vEmzK4BxQnEP0LTVcRbF9y-6ofamVpiAsXC3y46T0nqPVyEQjYvY45XEC7GBae6KLXxVws0ba877JifQbp2GgMpXQB_SsdIRM3A"/>
+<div class="absolute inset-0 card-gradient flex flex-col justify-end p-3 text-white">
+<h4 class="font-bold text-sm leading-tight mb-1">Spicy Miso Ramen</h4>
+<p class="text-xs text-gray-200">Rp 40K</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="relative min-w-[140px] h-40 rounded-3xl overflow-hidden shadow-md snap-center shrink-0">
+<img alt="Chicken Karaage" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDMG12dWkxGCLrDxj1oT1s3Gv3HFqLESYGP7aEqChFb5LSKXVUAuSykEhom4P1VsRAoEQW7hqf9LZDaAMrZYET1oYg9RU9m7w-RMX1a4N2z3lvHhlf-wsOyiibhjvumcU7mpoZ5Gp_2ld0O3ZlwzT96W_b6zQlhtBD_08AQFzQ2L2CP8NXnGOT2vTyXpskMo8rP1mt6WUjYn9ZtohfMm4EIdpVCO_IwYegpRF7oM8-eWvHhu-lBYZX4Pt9_15Aa1KsRPbrYajdbQ"/>
+<div class="absolute inset-0 card-gradient flex flex-col justify-end p-3 text-white">
+<h4 class="font-bold text-sm leading-tight mb-1">Chicken Karaage</h4>
+<p class="text-xs text-gray-200">Rp 25K</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Best Sellers Section -->
+</main>
+<!-- BEGIN: Footer Section -->
+<footer class="px-6 pb-8">
+<!-- Info Card -->
+<div class="bg-white/90 backdrop-blur-md rounded-[30px] p-5 mb-4 shadow-sm border border-gray-100 flex items-center justify-between">
+<!-- Address -->
+<div class="flex items-start gap-3 flex-1">
+<i class="w-5 h-5 text-brand-red mt-1 shrink-0" data-lucide="map-pin"></i>
+<div>
+<p class="font-bold text-sm text-gray-900 leading-tight mb-0.5">Jl. Sudirman No.123</p>
+<p class="text-xs text-gray-500">Palembang</p>
+</div>
+</div>
+<!-- Divider -->
+<div class="w-px h-10 bg-gray-200 mx-4"></div>
+<!-- Hours -->
+<div class="flex items-start gap-3 flex-1">
+<i class="w-5 h-5 text-brand-red mt-1 shrink-0" data-lucide="clock"></i>
+<div>
+<p class="text-[10px] text-gray-500 mb-0.5">Open Daily</p>
+<p class="font-bold text-sm text-gray-900 leading-tight">10.00 - 22.00</p>
+</div>
+</div>
+</div>
+<!-- Map Button -->
+<button class="w-full bg-brand-black text-white py-4 px-6 rounded-full flex justify-center items-center gap-2 font-bold text-sm tracking-widest shadow-md hover:bg-gray-800 transition mb-8">
+<i class="w-4 h-4 text-brand-red" data-lucide="map-pin"></i>
+<span>OPEN IN GOOGLE MAPS</span>
+<i class="w-4 h-4 ml-auto" data-lucide="chevron-right"></i>
+</button>
+<!-- Copyright -->
+<p class="text-center text-xs text-gray-500 tracking-wide">
+      © 2024 Joffi Ramen · All Rights Reserved
+    </p>
+</footer>
+<!-- END: Footer Section -->
+<!-- Initialize Lucide Icons -->
+<script data-purpose="icon-setup">
+    lucide.createIcons();
+  </script>
+</body></html>
