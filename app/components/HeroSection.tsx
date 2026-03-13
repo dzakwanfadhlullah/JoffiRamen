@@ -72,36 +72,43 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="space-y-4"
         >
-          {/* Primary CTA: Solid Red with Subtle Pulse */}
+          {/* Primary CTA: Premium Red Glassmorphism */}
           <motion.a
             href="https://wa.me/6282379809008"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            animate={{ boxShadow: ["0px 8px 20px rgba(179,27,27,0.3)", "0px 8px 35px rgba(179,27,27,0.6)", "0px 8px 20px rgba(179,27,27,0.3)"] }}
-            transition={{ boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" } }}
-            className="w-full bg-[var(--color-brand-red)] text-white h-[52px] px-6 rounded-[14px] flex justify-between items-center font-bold text-sm tracking-wide hover:bg-red-800 transition"
+            whileTap={{ scale: 0.96 }}
+            style={{ WebkitBackdropFilter: "blur(24px)" }}
+            className="group relative overflow-hidden w-full text-white h-[52px] px-6 rounded-[16px] flex justify-between items-center font-bold text-sm tracking-wide transition shadow-[0_8px_32px_rgba(179,27,27,0.4)] border border-red-300/30 bg-red-900/40 backdrop-blur-xl"
           >
-            <div className="flex items-center gap-3">
-              <MessageCircle className="w-5 h-5" />
-              <span>RESERVASI MEJA</span>
+            <div className="flex items-center gap-3 relative z-10">
+              <MessageCircle className="w-5 h-5 drop-shadow-md" />
+              <span className="drop-shadow-md">RESERVASI MEJA</span>
             </div>
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-5 h-5 relative z-10 drop-shadow-md text-white/80 group-hover:translate-x-1 transition-transform" />
+            
+            {/* Shimmer shining effect */}
+            <motion.div
+              animate={{ x: ["-100%", "200%"] }}
+              transition={{ repeat: Infinity, repeatDelay: 4, duration: 1.5, ease: "easeInOut" }}
+              className="absolute inset-0 z-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-20deg]"
+            />
           </motion.a>
           
-          {/* Secondary CTA: Outline Style */}
+          {/* Secondary CTA: Pure Frosted Glass */}
           <motion.button
             onClick={onOpenMenu}
             whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full bg-transparent border-2 border-white text-white h-[52px] px-6 rounded-[14px] flex justify-between items-center font-bold text-sm tracking-wide hover:bg-white/10 transition"
+            whileTap={{ scale: 0.96 }}
+            style={{ WebkitBackdropFilter: "blur(12px)" }}
+            className="group w-full text-white h-[52px] px-6 rounded-[16px] flex justify-between items-center font-bold text-sm tracking-wide transition shadow-[0_8px_32px_rgba(0,0,0,0.1)] border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 drop-shadow-md">
               <BookOpen className="w-5 h-5" />
               <span>LIHAT MENU</span>
             </div>
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-5 h-5 drop-shadow-md text-white/70 group-hover:translate-x-1 transition-transform" />
           </motion.button>
         </motion.div>
       </div>
