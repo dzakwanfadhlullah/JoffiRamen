@@ -18,9 +18,9 @@ export default function QuickAccessGrid({ onOpenMenu }: QuickAccessGridProps) {
       isModalTrigger: false,
     },
     {
-      title: "BUKU MENU",
+      title: "MENU LENGKAP",
       subtitle: "Lihat Menu Lengkap",
-      iconSrc: "/icons/notes.png",
+      iconSrc: "/icons/notes.svg",
       href: "#",
       isModalTrigger: true,
     },
@@ -44,7 +44,7 @@ export default function QuickAccessGrid({ onOpenMenu }: QuickAccessGridProps) {
     <section>
       <div className="text-center mb-6">
         <h2 className="font-heading text-xl font-bold tracking-widest text-gray-900">
-          AKSES <span className="text-[var(--color-brand-red)]">CEPAT</span>
+          QUICK <span className="text-[var(--color-brand-red)]">ACCESS</span>
         </h2>
         <div className="w-10 h-0.5 bg-[var(--color-brand-red)] mx-auto mt-2"></div>
       </div>

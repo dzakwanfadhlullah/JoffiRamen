@@ -72,21 +72,20 @@ export default function HeroSection({ onOpenMenu }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="space-y-4"
         >
-          {/* Primary CTA: Premium Red Glassmorphism */}
+          {/* Primary CTA: Premium Solid Vibrant Red with Sheen */}
           <motion.a
             href="https://wa.me/6282379809008"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.96 }}
-            style={{ WebkitBackdropFilter: "blur(24px)" }}
-            className="group relative overflow-hidden w-full text-white h-[52px] px-6 rounded-[16px] flex justify-between items-center font-bold text-sm tracking-wide transition shadow-[0_8px_32px_rgba(179,27,27,0.4)] border border-red-300/30 bg-red-900/40 backdrop-blur-xl"
+            className="group relative overflow-hidden w-full text-white h-[52px] px-6 rounded-[16px] flex justify-between items-center font-bold text-sm tracking-wide transition shadow-[0_8px_20px_rgba(179,27,27,0.5)] border-t border-red-400/50 bg-gradient-to-b from-[#E52A2A] to-[#A01616]"
           >
             <div className="flex items-center gap-3 relative z-10">
               <MessageCircle className="w-5 h-5 drop-shadow-md" />
-              <span className="drop-shadow-md">RESERVASI MEJA</span>
+              <span className="drop-shadow-md tracking-wider">RESERVASI MEJA</span>
             </div>
-            <ChevronRight className="w-5 h-5 relative z-10 drop-shadow-md text-white/80 group-hover:translate-x-1 transition-transform" />
+            <ChevronRight className="w-5 h-5 relative z-10 drop-shadow-md text-white/90 group-hover:translate-x-1 transition-transform" />
             
             {/* Shimmer shining effect */}
             <motion.div

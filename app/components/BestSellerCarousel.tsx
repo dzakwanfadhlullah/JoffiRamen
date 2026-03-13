@@ -32,7 +32,7 @@ export default function BestSellerCarousel() {
     <section>
       <div className="text-center mb-6">
         <h2 className="font-heading text-xl font-bold tracking-widest text-gray-900">
-          MENU <span className="text-[var(--color-brand-red)]">TERLARIS</span>
+          BEST <span className="text-[var(--color-brand-red)]">SELLER</span>
         </h2>
         <div className="w-10 h-0.5 bg-[var(--color-brand-red)] mx-auto mt-2"></div>
       </div>
