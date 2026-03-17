@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${openSans.variable} ${montserrat.variable} font-body antialiased bg-[#F8F5F0] text-gray-900 mx-auto max-w-md min-h-screen relative shadow-2xl overflow-x-hidden`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
